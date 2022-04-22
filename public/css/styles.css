@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.paragraph {
+  margin-bottom: 30px;
+}
+
+.icon {
+  font-size: 2em;
+  color: #1259c3;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.section-title {
+  padding: 6px;
+  font-size: 24px;
+  color: #2f2f2f;
+  text-align: center;
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  margin: 20px;
+  background-color: white;
+}
+
+.card-header {
+  border-bottom: 2px solid #ebebeb;
+}
+
+.card-header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  position: relative;
+}
+
+.card-body i {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #39b54a;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #39b54a;
+  width: 30px;
+  height: 30px;
+}
+
+.card-price,
+.card-discount {
+  display: inline-block;
+}
+
+.card-discount {
+  color: #39b54a;
+  margin: 0px 6px;
+  font-size: 16px;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card-description {
+  font-size: 16px;
+  display: none;
+  color: #666;
+}
+
+/* ESTILOS TABLET */
+@media (min-width: 769px) {
+  .card:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .card:hover .card-description {
+    display: block;
+  }
+
+  .card:hover .fa-truck {
+    transform: rotate(-90deg);
+    transition: 1s;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ESTILOS DESKTOP */
+@media (min-width: 1030px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
