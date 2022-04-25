@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("server on port " + process.env.PORT);
+  console.log("server on port " + (process.env.PORT || 3000));
 });
 
 app.get("/", (req, res) => {
